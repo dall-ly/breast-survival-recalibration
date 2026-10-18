@@ -1,0 +1,18 @@
+{
+  "input_hashes": {
+    "fixed_results": "7112209ecdadf28661d6a10fb840044a4ebc6080cf6139b803874472d7636a8f",
+    "selection_results": "424933100e387c621a9e47573f5557564d7026a82c29cfa601846b4a28e8efb6",
+    "selection_decisions": "c01d7857a8f71dc208a154b94aa75b6286553b10f194a7734827cf25c852ed59"
+  },
+  "input_rows": {
+    "fixed": 126000,
+    "oob": 27000,
+    "decisions": 2700
+  },
+  "table2_independent_formula_max_error": 2.7755575615628914e-17,
+  "selection_decision_disagreements": 0,
+  "fixed_oob_replay_max_error": 5.551115123125783e-17,
+  "all_input_hashes_unchanged": true,
+  "no_fitting": true,
+  "no_source_writes": true
+}

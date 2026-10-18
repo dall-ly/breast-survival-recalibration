@@ -1,0 +1,86 @@
+READ-ONLY PAIRED ALLOCATION AUDIT
+
+Brier(method) minus Brier(reference) within the same cohort, predictor, budget and allocation; positive is worse.
+Proportion of 300 allocations with signed paired delta > 0; exact ties are retained and are not harmful. This is probability-prediction error, not a clinical-harm endpoint.
+Empirical 5th and 95th percentiles of 300 paired allocation differences, using linear interpolation; an allocation distribution, not a patient/population confidence interval.
+Mean of the largest 30 signed paired allocation differences among 300 allocations. Negative differences remain negative; no truncation at zero. After excluding the first 20, average the largest 28 of 280.
+Compute each predictor-specific Brier score separately; average the three scores equally within each allocation before forming allocation summaries. This is not an ensemble prediction model.
+Mean Brier is unscaled. Delta means, allocation interval and worst-decile mean are displayed in units of 10^-3 (raw delta multiplied by 1000). Harm and selection frequencies are percentages.
+Primary evaluation uses all patients outside the calibration sample: main n=555,1878,54.
+Sensitivity/figure uses patients after each cohort largest calibration prefix: n=455,1778,54; held fixed across budgets within a repeat, varies between repeats.
+Method-selection percentages pool 900 predictor-specific decisions per cohort (300 allocations x 3 predictors). They do not describe one ensemble-level decision.
+Exclusion of the original 20 allocations is a numerical diagnostic. The remaining 280 allocations reuse the same patients and do not remove historical/pilot-based study selection.
+
+MAIN TABLE II (remaining; Average):
+           cohort             method mean_brier_display mean_delta_display allocation_interval_display harm_percent_display worst10_mean_display
+GSE42568_external          unchanged            0.15867              0.000            [+0.000, +0.000]                  0.0                0.000
+METABRIC_external          unchanged            0.09710              0.000            [+0.000, +0.000]                  0.0                0.000
+    SCANB_holdout          unchanged            0.04852              0.000            [+0.000, +0.000]                  0.0                0.000
+GSE42568_external       intercept_ML            0.13621            -22.459          [-38.480, +10.327]                 10.0              +13.347
+METABRIC_external       intercept_ML            0.09633             -0.772            [-2.407, +4.326]                 22.7               +4.995
+    SCANB_holdout       intercept_ML            0.04979             +1.264            [-0.029, +4.786]                 88.0               +5.393
+GSE42568_external intercept_slope_ML            0.14004            -18.628          [-39.070, +20.704]                 15.0              +26.675
+METABRIC_external intercept_slope_ML            0.09765             +0.542            [-2.224, +7.529]                 40.7               +8.173
+    SCANB_holdout intercept_slope_ML            0.05146             +2.934            [-0.065, +9.340]                 93.0              +10.420
+GSE42568_external   shrink_intercept            0.14116            -17.515           [-23.528, -7.333]                  1.3               -5.380
+METABRIC_external   shrink_intercept            0.09575             -1.350            [-2.309, +1.072]                 11.0               +1.388
+    SCANB_holdout   shrink_intercept            0.04895             +0.421            [-0.044, +1.567]                 80.0               +1.841
+
+MAIN TABLE III:
+           cohort     method mean_brier_display  unchanged_percent  shrink_intercept_percent  intercept_ML_percent
+GSE42568_external    OOB_min            0.14002           4.000000                 23.888889             72.111111
+METABRIC_external    OOB_min            0.09658          58.111111                 32.444444              9.444444
+    SCANB_holdout    OOB_min            0.04895          80.666667                 13.888889              5.444444
+GSE42568_external OOB_simple            0.15859          97.888889                  2.111111              0.000000
+METABRIC_external OOB_simple            0.09710          99.888889                  0.111111              0.000000
+    SCANB_holdout OOB_simple            0.04859          98.777778                  0.222222              1.000000
+
+TAIL COUNTS:
+evaluation  n_predictor_budget_cells  mean_delta_lower_count  mean_delta_higher_count  mean_delta_tie_count  q95_delta_lower_count  q95_delta_higher_count  q95_delta_tie_count  harm_fraction_lower_count  harm_fraction_higher_count  harm_fraction_tie_count  worst10_mean_delta_lower_count  worst10_mean_delta_higher_count  worst10_mean_delta_tie_count
+    common                        30                      24                        6                     0                     30                       0                    0                         30                           0                        0                              30                                0                             0
+ remaining                        30                      24                        6                     0                     30                       0                    0                         30                           0                        0                              30                                0                             0
+
+TAIL EXCEPTIONS:
+Empty DataFrame
+Columns: [evaluation, cohort, budget, model, mean_delta_k5, q95_delta_k5, harm_fraction_k5, worst10_mean_delta_k5, mean_delta_ordinary, q95_delta_ordinary, harm_fraction_ordinary, worst10_mean_delta_ordinary, mean_delta_k5_minus_ordinary, q95_delta_k5_minus_ordinary, harm_fraction_k5_minus_ordinary, worst10_mean_delta_k5_minus_ordinary]
+Index: []
+
+PILOT EXCLUSION DIAGNOSTIC:
+[
+  {
+    "evaluation": "remaining",
+    "n_ordinary_or_penalized_vs_unchanged_cells": 60,
+    "mean_delta_sign_changes_300_to_280": 0,
+    "n_predictor_budget_cells": 30,
+    "k5_lower_worst10_than_ordinary_after280": 30,
+    "k5_lower_harm_than_ordinary_after280": 30
+  },
+  {
+    "evaluation": "common",
+    "n_ordinary_or_penalized_vs_unchanged_cells": 60,
+    "mean_delta_sign_changes_300_to_280": 0,
+    "n_predictor_budget_cells": 30,
+    "k5_lower_worst10_than_ordinary_after280": 30,
+    "k5_lower_harm_than_ordinary_after280": 30
+  }
+]
+
+VERIFICATION:
+{
+  "input_hashes": {
+    "fixed_results": "7112209ecdadf28661d6a10fb840044a4ebc6080cf6139b803874472d7636a8f",
+    "selection_results": "424933100e387c621a9e47573f5557564d7026a82c29cfa601846b4a28e8efb6",
+    "selection_decisions": "c01d7857a8f71dc208a154b94aa75b6286553b10f194a7734827cf25c852ed59"
+  },
+  "input_rows": {
+    "fixed": 126000,
+    "oob": 27000,
+    "decisions": 2700
+  },
+  "table2_independent_formula_max_error": 2.7755575615628914e-17,
+  "selection_decision_disagreements": 0,
+  "fixed_oob_replay_max_error": 5.551115123125783e-17,
+  "all_input_hashes_unchanged": true,
+  "no_fitting": true,
+  "no_source_writes": true
+}

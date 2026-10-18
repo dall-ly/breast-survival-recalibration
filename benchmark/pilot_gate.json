@@ -1,0 +1,17 @@
+{
+  "numerical_gate_passed": true,
+  "MET100_vs_unchanged": -0.001574432789712546,
+  "SCAN100_vs_unchanged": 0.00034279290844321797,
+  "vs_intercept_ML": {
+    "METABRIC_external": -0.00017580524375603035,
+    "SCANB_holdout": -0.0007602410724319303,
+    "GSE42568_external": 0.004250099523378514
+  },
+  "novelty_gate": "separate review required; numerical pass is not publication readiness",
+  "repetitions": 20,
+  "seconds": 2.273264169692993,
+  "fixed_model_hashes": {
+    "runs\\gse96058_os_v5_expansion\\combined_3year_predictions.csv": "c3f6fcd404e80e995c7180f1908aa523df7a0fa8cfdc131cc00a9a8ee1674e3f",
+    "runs\\gse96058_os_v5_expansion\\external_cohort\\locked_transport\\predictions_GSE42568_external.csv": "d8a0cf2495290b83be7a72b435ea879db7c1a1ad1110652fdcdbdf80486e8214"
+  }
+}

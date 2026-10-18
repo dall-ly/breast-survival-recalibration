@@ -1,0 +1,64 @@
+{
+  "benchmark_smoke": {
+    "passed": true,
+    "repeats": 2,
+    "rows_compared": 300,
+    "max_brier_error_by_method": {
+      "intercept_ML": 1.1102230246251565e-16,
+      "intercept_slope_ML": 3.020720951152356e-09,
+      "intercept_slope_nonnegative_ML": 1.7132253948837217e-10,
+      "shrink_intercept": 9.71445146547012e-17,
+      "unchanged": 1.1102230246251565e-16
+    },
+    "seconds": 0.27102112770080566,
+    "fixed_predictions_sha256": "7df3d64e64695d256fc4506ff46ca307e62f0156d3165271b644224e9ac0a916",
+    "scope": "Conditional updating of supplied fixed scores; does not reproduce or independently validate base-model development."
+  },
+  "sensitivity_reproduction": {
+    "passed": true,
+    "rows": 126000,
+    "max_brier_error": 0.0
+  },
+  "oob_pilot": {
+    "passed": true,
+    "mode": "pilot",
+    "repetitions_per_cohort": 10,
+    "decisions": 90,
+    "evaluation_rows": 900,
+    "inner_fit_rows": 9000,
+    "boundary_counts_predictor_bootstrap": {
+      "interior": 8934,
+      "no_events": 66,
+      "all_events": 0,
+      "no_observable_outcomes": 0
+    },
+    "max_root_residual": 5.496936239524075e-11,
+    "max_archived_objective_gradient_residual": 3.382749635960636e-11,
+    "max_archived_parameter_difference": 5.551115123125783e-16,
+    "max_archived_Brier_difference": 1.1102230246251565e-16,
+    "shared_inner_resampling_passed": true,
+    "independent_selection_summary_recheck_passed": true,
+    "all_oob_patient_coverage_positive": true,
+    "decision_hash_unchanged_after_evaluation": true,
+    "original_inputs_unchanged": true,
+    "seconds": 3.325779438018799
+  },
+  "summary_verification": {
+    "input_hashes": {
+      "fixed_results": "7112209ecdadf28661d6a10fb840044a4ebc6080cf6139b803874472d7636a8f",
+      "selection_results": "424933100e387c621a9e47573f5557564d7026a82c29cfa601846b4a28e8efb6",
+      "selection_decisions": "c01d7857a8f71dc208a154b94aa75b6286553b10f194a7734827cf25c852ed59"
+    },
+    "input_rows": {
+      "fixed": 126000,
+      "oob": 27000,
+      "decisions": 2700
+    },
+    "table2_independent_formula_max_error": 2.7755575615628914e-17,
+    "selection_decision_disagreements": 0,
+    "fixed_oob_replay_max_error": 5.551115123125783e-17,
+    "all_input_hashes_unchanged": true,
+    "no_fitting": true,
+    "no_source_writes": true
+  }
+}

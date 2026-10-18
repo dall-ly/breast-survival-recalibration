@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-16",
+  "question": "When a fixed breast-cancer survival score is transported, can a small target calibration sample improve probability accuracy without the instability of unrestricted recalibration?",
+  "study_type": "Retrospective calibration-method benchmark conditional on fixed prediction models; not a new independent validation of their architecture.",
+  "routes": {"calibration": "Run one finite pilot, retain only if a useful technical result survives strongest simple controls.", "biology": "Read-only feasibility and prior-art gate; do not scan pathways for publishable p-values."},
+  "models": ["Clinical", "Gene", "Pathway"],
+  "cohorts": ["SCANB_holdout", "METABRIC_external", "GSE42568_external"],
+  "horizon_days": 1095,
+  "budget_patients": [25, 50, 100, 200],
+  "gse_budget_patients": [25, 50],
+  "pilot_repetitions": 20,
+  "full_repetitions_if_gate_passes": 300,
+  "seed": 2026101601,
+  "sampling": "Simple random calibration samples without outcome stratification, independently repeated. Remaining patients form the disjoint test sample. Within each repetition budgets are nested prefixes of the same permutation. Same samples for every model/method. Store IDs and hashes. No target-test outcomes enter fitting or method selection.",
+  "methods": [
+    {"name": "unchanged", "definition": "Fixed original probabilities"},
+    {"name": "intercept_ML", "definition": "IPCW complementary-log-log binary likelihood with original log cumulative risk as offset; one intercept"},
+    {"name": "intercept_slope_ML", "definition": "Same likelihood; intercept and unconstrained slope; if no case/control or nonconvergence use the intercept solution and report fallback"},
+    {"name": "shrink_intercept", "definition": "Same summed IPCW likelihood plus 5*a^2/2, shrinking the log-risk adjustment to zero; fixed prior curvature 5, no tuning"}
+  ],
+  "zero_event_handling": "For unpenalized intercept ML return constant zero when no weighted cases and constant one when no weighted controls; retain and report these repetitions. Penalized solution remains finite.",
+  "censoring": "Estimate calibration weights on calibration patients only; evaluation weights on disjoint test patients. Earlier-censored subjects have zero binary likelihood weight, never relabeled as survivors.",
+  "primary_metric": "Held-out IPCW Brier score; lower is better",
+  "secondary_metrics": ["mean predicted risk", "KM observed risk", "absolute calibration-in-the-large error", "rank preservation for intercept updates", "number of calibration events", "fallback/boundary count"],
+  "pilot_keep_rule": "At budget 100, averaged over the three fixed predictors, shrinkage must improve mean Brier versus unchanged by at least 0.001 in METABRIC and not worsen SCAN-B by more than 0.001; mean Brier versus intercept ML must be lower in at least two of the three available cohort-by-low-budget settings (MET100,SCAN100,GSE50). These are technical screening thresholds for this project, not clinical or EI acceptance standards.",
+  "failure_rule": "Do not tune the shrinkage strength or try additional methods against the pilot tests. If the algorithm gate fails, prune the new-method claim. A calibration-budget benchmark may continue only if it gives a reproducible, nontrivial answer against unchanged and ordinary recalibration; otherwise prune the route.",
+  "reporting": "Report every cohort, predictor, budget and method, all failures and negative results. Repeated-split intervals describe calibration-sample variability within these finite cohorts, not independent-patient confidence intervals. No publication-ready formatting before the numerical and novelty gates pass."
+}

@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-16",
+  "status": "Frozen before this sensitivity computation, after review of the original benchmark",
+  "study_stage": "Post hoc robustness checks requested during manuscript review; not prospective preregistration or independent confirmation",
+  "purpose": "Resolve model averaging, changing evaluation subsets, penalty dependence and prior-work differentiation without new architecture search",
+  "cohorts": ["SCANB_holdout", "METABRIC_external", "GSE42568_external"],
+  "models": ["Clinical", "Gene", "Pathway"],
+  "horizon_days": 1095,
+  "seed": 2026101601,
+  "repetitions": 300,
+  "budgets": {"SCANB_holdout": [25,50,100,200], "METABRIC_external": [25,50,100,200], "GSE42568_external": [25,50]},
+  "calibration": "Reuse original sorted-patient random permutations and nested prefixes for every predictor and method. No additional allocations.",
+  "evaluation_designs": {
+    "remaining": "Original evaluation subset order[budget:]",
+    "common": "Within each repeat, every budget uses order[max_budget:] as its evaluation subset. SCAN-B n=455; METABRIC n=1778; GSE42568 n=54. This subset is fixed across budgets within a repeat, not across repeats. Unused calibration-pool patients at a smaller budget are not reassigned to evaluation."
+  },
+  "existing_methods": ["unchanged", "intercept_ML", "intercept_slope_ML", "shrink_intercept", "intercept_slope_nonnegative_ML"],
+  "penalty_strengths": [2.5,5,10],
+  "penalty_definition": "Summed IPCW cloglog negative log likelihood plus kappa*a^2/2; penalize the intercept only, slope fixed at 1",
+  "fit_sources": "Reuse all archived coefficients for existing methods. Refit kappa=5 to verify exact reproducibility, but use the archived kappa=5 coefficients for evaluation. Fit kappa=2.5 and 10 only on the calibration patients.",
+  "censoring": "Calibration weights estimated on that budget's calibration patients; evaluation weights re-estimated on each actual evaluation subset. Same established tied-time convention and zero-event handling. No evaluation outcomes enter fitting.",
+  "primary_reporting": "Preserve original primary analysis. Report both evaluation designs, all three predictors, all budgets and all three fixed penalties. Do not select a new preferred penalty from these results.",
+  "comparisons": ["ordinary minus unchanged by predictor and budget", "penalized minus unchanged", "penalized minus ordinary"],
+  "summaries": ["mean paired Brier difference", "relative mean change", "fraction of paired allocations improved", "median", "90th and 97.5th allocation percentiles", "upper-decile mean loss", "Monte Carlo standard error conditional on the fixed cohort"],
+  "interpretation_rules": [
+    "Separate the equal-predictor mean from each predictor; do not infer a common patient threshold from a mean crossover.",
+    "Retain a budget crossover only in the designs and predictors in which its sign change is observed.",
+    "Call a direction stable over the checked penalty range only if it holds at all three specified strengths; record any counterexample.",
+    "A lower mean and reduced upper-tail losses are distinct from winning in most allocations.",
+    "No population significance claim, clinical utility claim or independent architecture validation follows from these post hoc checks."
+  ],
+  "stop_rule": "Stop after this fixed grid and the three-paper literature comparison. If a claim fails, narrow or remove that claim; do not search additional penalties, models, seeds or cohorts to rescue it."
+}

@@ -1,0 +1,4 @@
+Cohort,Settings,Lower mean Brier,Lower worsening fraction,Lower upper-decile mean
+SCAN-B,12,12,12,12
+METABRIC,12,12,12,12
+GSE42568,6,0,6,6

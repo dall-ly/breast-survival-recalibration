@@ -1,0 +1,6 @@
+condition,cohort,calibration_n,comparison,operator,threshold,observed_mean_brier_difference,passes_setting,condition_combination
+1,METABRIC_external,100,kappa5 minus unchanged,<=,-0.001,-0.00157443278971255,True,all required
+2,SCANB_holdout,100,kappa5 minus unchanged,<=,0.001,0.00034279290844322377,True,all required
+3,METABRIC_external,100,kappa5 minus intercept_ML,<,0.0,-0.00017580524375604168,True,at least 2 of these 3 settings
+3,SCANB_holdout,100,kappa5 minus intercept_ML,<,0.0,-0.0007602410724319367,True,at least 2 of these 3 settings
+3,GSE42568_external,50,kappa5 minus intercept_ML,<,0.0,0.004250099523378528,False,at least 2 of these 3 settings

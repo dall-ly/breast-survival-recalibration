@@ -1,0 +1,78 @@
+{
+  "claim": "The trade-off between mean Brier change and worsening frequency depends on cohort and calibration budget; fixed shrinkage reduces allocation risk without uniformly giving the best mean.",
+  "generation_time_utc": "2026-10-18T16:06:12.692729+00:00",
+  "source_code": "plot_budget.py",
+  "source_code_sha256": "8d267c6642c652a0c3935cf873e67ff170862d73727bdf2962e9ac6d5e7da9dc",
+  "data_files": [
+    {
+      "path": "fig2_budget_response_data.csv",
+      "sha256": "c3165c1e3b4fe1dcadce49670fc7ec6d5e7479d69dd12b647de44a2450e61d78"
+    },
+    {
+      "path": "fig2_budget_response_paired_allocations.csv",
+      "sha256": "9eaa6f09e65d608373b1af360068335ae9e013d40ead98b29b13a2618d7fc485"
+    }
+  ],
+  "transformations": [
+    "Common evaluation patients fixed across calibration budgets within each permutation; post hoc sensitivity analysis.",
+    "For each allocation and method, first calculate predictor-specific Brier differences vs unchanged, then average equally over Clinical, Gene and Pathway.",
+    "Summarize 300 allocation-level averages per cohort-budget-method: left arithmetic mean; right 100 * fraction(delta>0).",
+    "Left multiplied by 1000; units marked ×10^-3. Right in percent. No interval bands; no patient-level confidence intervals inferred.",
+    "Only observed budgets connected; log2 horizontal axis exposes doubling in sample size; all tick labels show actual sample sizes.",
+    "GSE42568 has only 25 and 50 patients and uses a shorter horizontal range. Left y scales differ and are explicitly labeled; right shares 0–100%.",
+    "Mentor-guided visual revision retains the 7.24 by 4.1 inch canvas and 8 pt text. Open markers, light horizontal grids, left and bottom spines, and a shared bottom legend follow the supplied Fig. 2. All lines are solid. Data values, axis limits, tick values, method order, and CSV inputs are unchanged."
+  ],
+  "exports": {
+    "svg": "fig3_budget_response.svg",
+    "pdf": "fig3_budget_response.pdf",
+    "png": "fig3_budget_response.png"
+  },
+  "size_inches": [
+    7.24,
+    4.1
+  ],
+  "png_dpi": 300,
+  "template": {
+    "full_width_inches": 7.24028,
+    "rendered_width_inches": 7.24,
+    "single_column_inches": 3.495,
+    "column_gap_inches": 0.25
+  },
+  "style": {
+    "method_colors": {
+      "intercept_ML": "#0072B2",
+      "shrink_intercept": "#D98200",
+      "intercept_slope_ML": "#009E73",
+      "unchanged": "#777777"
+    },
+    "legend_order": [
+      "intercept_ML",
+      "shrink_intercept",
+      "intercept_slope_ML"
+    ],
+    "line_styles": [
+      "-",
+      "-",
+      "-"
+    ],
+    "markers": [
+      "o",
+      "s",
+      "^"
+    ],
+    "inside_title": false,
+    "font": "Times New Roman",
+    "minimum_text_pt": 8,
+    "all_figure_text_pt": 8,
+    "template_font_compliance": "All visible labels, ticks, and legend text use 8 pt Times New Roman; Unicode superscripts avoid a separate math font.",
+    "marker_face_color": "white",
+    "zero_line_style": "solid",
+    "grid_line_style": "solid",
+    "vector_text": true,
+    "no_smoothing": true,
+    "no_dual_axes": true
+  },
+  "automatic_text_bounds_audit": {
+    "outside_canvas": []
+  }
+}

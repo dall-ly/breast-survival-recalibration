@@ -1,0 +1,642 @@
+{
+  "figure": 2,
+  "source_csv": "results\\table2_main_remaining_average.csv",
+  "source_sha256": "517e6f05487a73cdedbfb73439406190b5c172f392288ae9b0233f07c90e3a21",
+  "source_code": "plot_main_results.py",
+  "source_code_sha256": "412c1eb797c59cc9ddb2c75633e86ffed0e5c84fa2cdabb51d374f6fa509225c",
+  "created_utc": "2026-10-18T16:06:09.997920+00:00",
+  "size_inches": [
+    7.24,
+    3.0
+  ],
+  "dpi": 300,
+  "png_dimensions": [
+    2172,
+    900
+  ],
+  "font": "Times New Roman",
+  "minimum_text_pt": 8,
+  "all_lines_solid": true,
+  "method_colors": {
+    "intercept_ML": "#0072B2",
+    "shrink_intercept": "#D98200",
+    "intercept_slope_ML": "#009E73"
+  },
+  "reference_design_adopted": "Three parallel panels, nine method rows grouped by cohort, alternating pale backgrounds, signed bar-end labels, and one bottom legend.",
+  "panel_transformations": [
+    "−1000 × mean_delta",
+    "harm_percent",
+    "−1000 × worst10_mean_delta"
+  ],
+  "uncertainty": "No confidence interval is plotted. The right panel summarizes the 30 largest signed allocation-level delta values among 300 allocations.",
+  "rounding": "Brier reductions rounded once to two decimals from the raw floating-point columns; worsening to one decimal.",
+  "data_values_and_labels": [
+    {
+      "cohort": "SCAN-B",
+      "calibration_n": 100,
+      "method": "intercept_ML",
+      "values": [
+        -1.2638009831617123,
+        88.0,
+        -5.3933101284274585
+      ],
+      "labels": [
+        "−1.26",
+        "88.0%",
+        "−5.39"
+      ]
+    },
+    {
+      "cohort": "SCAN-B",
+      "calibration_n": 100,
+      "method": "shrink_intercept",
+      "values": [
+        -0.42105467699034765,
+        80.0,
+        -1.8405794416918908
+      ],
+      "labels": [
+        "−0.42",
+        "80.0%",
+        "−1.84"
+      ]
+    },
+    {
+      "cohort": "SCAN-B",
+      "calibration_n": 100,
+      "method": "intercept_slope_ML",
+      "values": [
+        -2.934045208314699,
+        93.0,
+        -10.419879859523418
+      ],
+      "labels": [
+        "−2.93",
+        "93.0%",
+        "−10.42"
+      ]
+    },
+    {
+      "cohort": "METABRIC",
+      "calibration_n": 100,
+      "method": "intercept_ML",
+      "values": [
+        0.7722401423623658,
+        22.666666666666664,
+        -4.994908172869331
+      ],
+      "labels": [
+        "+0.77",
+        "22.7%",
+        "−4.99"
+      ]
+    },
+    {
+      "cohort": "METABRIC",
+      "calibration_n": 100,
+      "method": "shrink_intercept",
+      "values": [
+        1.3497900112875874,
+        11.0,
+        -1.3883010545184746
+      ],
+      "labels": [
+        "+1.35",
+        "11.0%",
+        "−1.39"
+      ]
+    },
+    {
+      "cohort": "METABRIC",
+      "calibration_n": 100,
+      "method": "intercept_slope_ML",
+      "values": [
+        -0.5424700016430213,
+        40.666666666666664,
+        -8.173079408382584
+      ],
+      "labels": [
+        "−0.54",
+        "40.7%",
+        "−8.17"
+      ]
+    },
+    {
+      "cohort": "GSE42568",
+      "calibration_n": 50,
+      "method": "intercept_ML",
+      "values": [
+        22.45868637547609,
+        10.0,
+        -13.346581087968787
+      ],
+      "labels": [
+        "+22.46",
+        "10.0%",
+        "−13.35"
+      ]
+    },
+    {
+      "cohort": "GSE42568",
+      "calibration_n": 50,
+      "method": "shrink_intercept",
+      "values": [
+        17.515334376417247,
+        1.3333333333333335,
+        5.379678618616404
+      ],
+      "labels": [
+        "+17.52",
+        "1.3%",
+        "+5.38"
+      ]
+    },
+    {
+      "cohort": "GSE42568",
+      "calibration_n": 50,
+      "method": "intercept_slope_ML",
+      "values": [
+        18.627685491062696,
+        15.0,
+        -26.674656561446234
+      ],
+      "labels": [
+        "+18.63",
+        "15.0%",
+        "−26.67"
+      ]
+    }
+  ],
+  "checks": {
+    "values_verified": 27,
+    "text_outside_canvas": [],
+    "bar_labels_outside_panel": [],
+    "GSE42568_slope_worst_label": "−26.67",
+    "METABRIC_ordinary_worst_label": "−4.99"
+  },
+  "automatic_text_bounds_audit": {
+    "outside_canvas": [],
+    "bar_labels_outside_panel": []
+  },
+  "text_bounds_inches": [
+    {
+      "text": "−1.26",
+      "bounds_inches": [
+        1.17998,
+        2.34316,
+        1.45331,
+        2.44418
+      ]
+    },
+    {
+      "text": "−0.42",
+      "bounds_inches": [
+        1.21493,
+        2.18799,
+        1.48826,
+        2.28901
+      ]
+    },
+    {
+      "text": "−2.93",
+      "bounds_inches": [
+        1.11072,
+        2.03282,
+        1.38406,
+        2.13384
+      ]
+    },
+    {
+      "text": "+0.77",
+      "bounds_inches": [
+        1.62107,
+        1.73066,
+        1.89441,
+        1.83168
+      ]
+    },
+    {
+      "text": "+1.35",
+      "bounds_inches": [
+        1.64502,
+        1.57549,
+        1.91836,
+        1.67651
+      ]
+    },
+    {
+      "text": "−0.54",
+      "bounds_inches": [
+        1.20989,
+        1.42032,
+        1.48323,
+        1.52134
+      ]
+    },
+    {
+      "text": "+22.46",
+      "bounds_inches": [
+        2.52031,
+        1.11816,
+        2.85365,
+        1.21918
+      ]
+    },
+    {
+      "text": "+17.52",
+      "bounds_inches": [
+        2.31533,
+        0.96299,
+        2.64867,
+        1.06401
+      ]
+    },
+    {
+      "text": "+18.63",
+      "bounds_inches": [
+        2.36146,
+        0.80782,
+        2.69479,
+        0.90884
+      ]
+    },
+    {
+      "text": "Brier reduction (×10⁻³)",
+      "bounds_inches": [
+        1.41871,
+        0.42094,
+        2.50537,
+        0.52492
+      ]
+    },
+    {
+      "text": "0",
+      "bounds_inches": [
+        1.51739,
+        0.58048,
+        1.57739,
+        0.6815
+      ]
+    },
+    {
+      "text": "10",
+      "bounds_inches": [
+        1.90204,
+        0.58048,
+        2.02204,
+        0.6815
+      ]
+    },
+    {
+      "text": "20",
+      "bounds_inches": [
+        2.31669,
+        0.58048,
+        2.43669,
+        0.6815
+      ]
+    },
+    {
+      "text": "30",
+      "bounds_inches": [
+        2.73135,
+        0.58048,
+        2.85135,
+        0.6815
+      ]
+    },
+    {
+      "text": "(a) Average improvement ↑",
+      "bounds_inches": [
+        1.29022,
+        2.60633,
+        2.63386,
+        2.70825
+      ]
+    },
+    {
+      "text": "88.0%",
+      "bounds_inches": [
+        4.52178,
+        2.34316,
+        4.82178,
+        2.44418
+      ]
+    },
+    {
+      "text": "80.0%",
+      "bounds_inches": [
+        4.40015,
+        2.18799,
+        4.70015,
+        2.28901
+      ]
+    },
+    {
+      "text": "93.0%",
+      "bounds_inches": [
+        4.5978,
+        2.03282,
+        4.8978,
+        2.13384
+      ]
+    },
+    {
+      "text": "22.7%",
+      "bounds_inches": [
+        3.52845,
+        1.73066,
+        3.82845,
+        1.83168
+      ]
+    },
+    {
+      "text": "11.0%",
+      "bounds_inches": [
+        3.35107,
+        1.57549,
+        3.6469,
+        1.67651
+      ]
+    },
+    {
+      "text": "40.7%",
+      "bounds_inches": [
+        3.80212,
+        1.42032,
+        4.10212,
+        1.52134
+      ]
+    },
+    {
+      "text": "10.0%",
+      "bounds_inches": [
+        3.33587,
+        1.11816,
+        3.63587,
+        1.21918
+      ]
+    },
+    {
+      "text": "1.3%",
+      "bounds_inches": [
+        3.2041,
+        0.96299,
+        3.4441,
+        1.06401
+      ]
+    },
+    {
+      "text": "15.0%",
+      "bounds_inches": [
+        3.41189,
+        0.80782,
+        3.71189,
+        0.90884
+      ]
+    },
+    {
+      "text": "Allocations (%)",
+      "bounds_inches": [
+        3.68107,
+        0.42094,
+        4.42773,
+        0.52492
+      ]
+    },
+    {
+      "text": "0",
+      "bounds_inches": [
+        3.11216,
+        0.58048,
+        3.17216,
+        0.6815
+      ]
+    },
+    {
+      "text": "50",
+      "bounds_inches": [
+        3.84236,
+        0.58048,
+        3.96236,
+        0.6815
+      ]
+    },
+    {
+      "text": "100",
+      "bounds_inches": [
+        4.57256,
+        0.58048,
+        4.75256,
+        0.6815
+      ]
+    },
+    {
+      "text": "(b) Worsening ↓",
+      "bounds_inches": [
+        3.6618,
+        2.60633,
+        4.447,
+        2.70825
+      ]
+    },
+    {
+      "text": "−5.39",
+      "bounds_inches": [
+        6.05152,
+        2.34316,
+        6.32486,
+        2.44418
+      ]
+    },
+    {
+      "text": "−1.84",
+      "bounds_inches": [
+        6.16139,
+        2.18799,
+        6.43472,
+        2.28901
+      ]
+    },
+    {
+      "text": "−10.42",
+      "bounds_inches": [
+        5.83608,
+        2.03282,
+        6.16942,
+        2.13384
+      ]
+    },
+    {
+      "text": "−4.99",
+      "bounds_inches": [
+        6.06384,
+        1.73066,
+        6.33718,
+        1.83168
+      ]
+    },
+    {
+      "text": "−1.39",
+      "bounds_inches": [
+        6.17537,
+        1.57549,
+        6.4487,
+        1.67651
+      ]
+    },
+    {
+      "text": "−8.17",
+      "bounds_inches": [
+        5.96556,
+        1.42032,
+        6.2389,
+        1.52134
+      ]
+    },
+    {
+      "text": "−13.35",
+      "bounds_inches": [
+        5.74558,
+        1.11816,
+        6.07891,
+        1.21918
+      ]
+    },
+    {
+      "text": "+5.38",
+      "bounds_inches": [
+        6.74133,
+        0.96299,
+        7.01466,
+        1.06401
+      ]
+    },
+    {
+      "text": "−26.67",
+      "bounds_inches": [
+        5.33343,
+        0.80782,
+        5.66676,
+        0.90884
+      ]
+    },
+    {
+      "text": "Brier reduction (×10⁻³)",
+      "bounds_inches": [
+        5.60343,
+        0.42094,
+        6.69009,
+        0.52492
+      ]
+    },
+    {
+      "text": "−30",
+      "bounds_inches": [
+        5.51227,
+        0.58048,
+        5.69893,
+        0.6815
+      ]
+    },
+    {
+      "text": "−20",
+      "bounds_inches": [
+        5.8215,
+        0.58048,
+        6.00817,
+        0.6815
+      ]
+    },
+    {
+      "text": "−10",
+      "bounds_inches": [
+        6.13074,
+        0.58048,
+        6.3174,
+        0.6815
+      ]
+    },
+    {
+      "text": "0",
+      "bounds_inches": [
+        6.5033,
+        0.58048,
+        6.5633,
+        0.6815
+      ]
+    },
+    {
+      "text": "10",
+      "bounds_inches": [
+        6.78254,
+        0.58048,
+        6.90254,
+        0.6815
+      ]
+    },
+    {
+      "text": "(c) Worst 10% improvement ↑",
+      "bounds_inches": [
+        5.39848,
+        2.60633,
+        6.89504,
+        2.70825
+      ]
+    },
+    {
+      "text": "SCAN-B\nm = 100",
+      "bounds_inches": [
+        0.53453,
+        2.1193,
+        0.9412,
+        2.3577
+      ]
+    },
+    {
+      "text": "METABRIC\nm = 100",
+      "bounds_inches": [
+        0.37672,
+        1.5068,
+        0.9412,
+        1.7452
+      ]
+    },
+    {
+      "text": "GSE42568\nm = 50",
+      "bounds_inches": [
+        0.43453,
+        0.8943,
+        0.9412,
+        1.1327
+      ]
+    },
+    {
+      "text": "Ordinary intercept",
+      "bounds_inches": [
+        2.24922,
+        0.08944,
+        3.12256,
+        0.19611
+      ]
+    },
+    {
+      "text": "Penalized intercept (κ = 5)",
+      "bounds_inches": [
+        3.49478,
+        0.08944,
+        4.74811,
+        0.19611
+      ]
+    },
+    {
+      "text": "Intercept + slope",
+      "bounds_inches": [
+        5.12033,
+        0.08944,
+        5.92033,
+        0.19611
+      ]
+    }
+  ]
+}

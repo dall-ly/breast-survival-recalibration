@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying manuscript when using this research code."
+title: "Benefits and Risks of Small Sample Recalibration for Breast Cancer Survival Prediction"
+type: software
+authors:
+  - family-names: Deng
+    given-names: Kai
+    affiliation: South-Central Minzu University
+  - family-names: Wang
+    given-names: Weinan
+    affiliation: South-Central Minzu University
+version: 1.0.0
+date-released: 2026-10-19
+license: MIT
+repository-code: "https://github.com/dall-ly/breast-survival-recalibration"
+url: "https://github.com/dall-ly/breast-survival-recalibration"

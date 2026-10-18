@@ -1,0 +1,139 @@
+{
+  "source_files": [
+    {
+      "file": "benchmark/calibration.py",
+      "source_sha256": "82ef81c291113ba522d034b006e89c52577901e56de0bb4f119162eefcc40650"
+    },
+    {
+      "file": "benchmark/run_benchmark.py",
+      "source_sha256": "e1664e1ac61f9415b42cfb76618265f1f94253e8b256975847c879c6d367e1fa"
+    },
+    {
+      "file": "benchmark/protocol.json",
+      "source_sha256": "db70e77ea0d6f011ea50ec2f966c5c33645f2361aed3449c4532b59a57923e2c"
+    },
+    {
+      "file": "benchmark/expected_split_brier.csv",
+      "source_sha256": "5e0a562d9569d4115ed2c025025f9e0feb55f8299953f63e63a1d47e74ad0482"
+    },
+    {
+      "file": "benchmark/pilot_gate.json",
+      "source_sha256": "a099d93b42d99eff8a767ab4bcac85c6026fc98cff358ffc6ef3c0e4ff896430"
+    },
+    {
+      "file": "sensitivity/inputs/archived_results/primary_results.csv",
+      "source_sha256": "03c29fd70eaed6ac8b2b241ff2f323a5edbf8f4c8442c06c6289b7e4caf328e0"
+    },
+    {
+      "file": "sensitivity/inputs/archived_results/sensitivity_results.csv",
+      "source_sha256": "23b3e4e5c07e347d2b6fcad81f32b17823ed81df21d6bfd3092c33b3a9a88329"
+    },
+    {
+      "file": "sensitivity/run_sensitivity.py",
+      "source_sha256": "7d9c2119b31bb383e9a5c1b28b76dd7be6cbf786974c1dca89c59a86caef9759"
+    },
+    {
+      "file": "sensitivity/protocol.json",
+      "source_sha256": "415611a6806f908e57230ef0143563e84bc611e74a9ae759bf22baa2e2167582"
+    },
+    {
+      "file": "sensitivity/expected_brier.csv",
+      "source_sha256": "d1607a01b65ca150b4c40c34d59d6308e149154a9e36b455db8885783c3af0bf"
+    },
+    {
+      "file": "sensitivity/inputs/calibration.py",
+      "source_sha256": "82ef81c291113ba522d034b006e89c52577901e56de0bb4f119162eefcc40650"
+    },
+    {
+      "file": "sensitivity/output/split_results.csv",
+      "source_sha256": "7112209ecdadf28661d6a10fb840044a4ebc6080cf6139b803874472d7636a8f"
+    },
+    {
+      "file": "selection/selection_experiment.py",
+      "source_sha256": "036c901345f3dd6d5ff73b99e40fd2e376a1fe1cabd86e4c7867d57520aaf9c0"
+    },
+    {
+      "file": "selection/selection_protocol.json",
+      "source_sha256": "7298e9c2ffcd86773e2409c1b48806861fe8931b48f67ea8709e9c4eb53b3ea3"
+    },
+    {
+      "file": "selection/selection_results/evaluation_results.csv",
+      "source_sha256": "424933100e387c621a9e47573f5557564d7026a82c29cfa601846b4a28e8efb6"
+    },
+    {
+      "file": "selection/selection_results/selection_decisions.csv",
+      "source_sha256": "c01d7857a8f71dc208a154b94aa75b6286553b10f194a7734827cf25c852ed59"
+    },
+    {
+      "file": "figures/fig2_budget_response_data.csv",
+      "source_sha256": "c3165c1e3b4fe1dcadce49670fc7ec6d5e7479d69dd12b647de44a2450e61d78"
+    },
+    {
+      "file": "figures/fig2_budget_response_paired_allocations.csv",
+      "source_sha256": "9eaa6f09e65d608373b1af360068335ae9e013d40ead98b29b13a2618d7fc485"
+    },
+    {
+      "file": "figures/fig1_workflow.png",
+      "source_sha256": "f10640edb5c6ac258be5fe3c8a9cfe63ea25c8a06b0efed9a1b0bc693de1daa4"
+    },
+    {
+      "file": "figures/fig2_main_results.png",
+      "source_sha256": "b4eab6cb8d23582db39b3d9af5f16f9e672d619a2c42e07dcf67fd53dc86e73a"
+    },
+    {
+      "file": "figures/fig3_budget_response.png",
+      "source_sha256": "d63191f32edd5cfb65c07055fd2ad1ad9c629853167241252f1be3daa00675a1"
+    },
+    {
+      "file": "source_models/scripts/analyze_expansion_v5.py",
+      "source_sha256": "77afd347e4c1f45af22bf7b17ef8a0fa950e6d536d5c87c61f03e1b09535661b"
+    },
+    {
+      "file": "source_models/scripts/survival_experiments.py",
+      "source_sha256": "b8550828af92004798c641bc3d402ea7fe216dc7fa8436c65c52663820ca0202"
+    },
+    {
+      "file": "source_models/scripts/experiment_clinical_anchor.py",
+      "source_sha256": "e3768a22eb5648b63bcad93ca78c3721fa68af040e26869efeaa3cca5cc52630"
+    },
+    {
+      "file": "source_models/scripts/analyze_gse96058_os.py",
+      "source_sha256": "e2672dc5ce864b7874c9064e2da710a5c65dc15394a7533de5afc195d8d4b97a"
+    },
+    {
+      "file": "source_models/scripts/prepare_external_cohort_v5.py",
+      "source_sha256": "44c7a7eb10abd0bf40d04e6029dd126d122b7417af8b28750b693b4a29ecf149"
+    },
+    {
+      "file": "source_models/scripts/modern_program_v5.py",
+      "source_sha256": "13924b455a898b0747853753deb28706877ecb7207550edfd862cebf400c1504"
+    },
+    {
+      "file": "source_models/scripts/modern_baseline_v5.py",
+      "source_sha256": "9c5c88596ab36ac3f67a444691edd7d66807056b3548f60de2391a31b912d870"
+    },
+    {
+      "file": "source_models/scripts/program_ranking_v5.py",
+      "source_sha256": "138830fe4f81c89b0c2304b3aa2c68517f67b1c446adcd10b19753345ff25070"
+    },
+    {
+      "file": "source_models/scripts/program_node_v5.py",
+      "source_sha256": "7657805db1c461a8cb092e87c7f5d30d365f640c8f059f5bcd5479e57103a5ac"
+    },
+    {
+      "file": "source_models/frozen_predictor_snapshot.json",
+      "source_sha256": "a42dffb71abf23c7d39144b3afc539caf25c613ea5c40a11da87d67d976f70fd"
+    },
+    {
+      "file": "source_models/requirements-original.txt",
+      "source_sha256": "948e3943e52955d9b6c5a69b971fa88a1c1cc71dc1586e0e64f66f399fa5dc34"
+    }
+  ],
+  "packaging_changes": [
+    "Relative paths for standalone execution",
+    "Removed local editorial and template paths from plotting metadata",
+    "Sensitivity audit uses released first-20 allocation records",
+    "Numerical algorithms and seeds preserved",
+    "External source-model data paths supplied through environment variables"
+  ]
+}

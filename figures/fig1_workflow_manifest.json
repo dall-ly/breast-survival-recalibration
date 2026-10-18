@@ -1,0 +1,41 @@
+{
+  "purpose": "Distinguish calibration-only updating and selection from disjoint paired evaluation.",
+  "size_inches": [
+    7.240277777777777,
+    2.5
+  ],
+  "width_points": 521.3,
+  "font_size_pt": 8,
+  "fonts": "Times New Roman throughout, including Greek symbols and bold panel labels",
+  "png_dpi": 300,
+  "text_outside_canvas": [],
+  "visual_reference": {
+    "citation": "Davis SE et al. Comparison of Prediction Model Performance Updating Protocols: Using a Data-Driven Testing Procedure to Guide Updating. AMIA Annu Symp Proc. 2019:1002–1010.",
+    "figure": "Figure 1",
+    "article": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7153129/",
+    "figure_page": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7153129/figure/f1-3203079/",
+    "borrowed_conventions": "Monochrome thin outlines; hexagonal processes; cylindrical data; left-to-right bootstrap/pool/bootstrap/distribution/decision sequence.",
+    "artwork_reuse": "No original image, text, or plotting code incorporated; original study-specific vector artwork."
+  },
+  "supporting_references_inspected": [
+    {
+      "article": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6857513/",
+      "figure": "Figure 1",
+      "role": "Methodological context; not the direct visual template."
+    },
+    {
+      "article": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10714456/",
+      "figure": "Figure 2",
+      "role": "Checked separation of update and evaluation data; not the direct visual template."
+    }
+  ],
+  "template_body_width_calculation": "(612 - 2*45.35) points = 521.3 points",
+  "original_code": true,
+  "all_outputs_relative_to_script": true,
+  "source_code": "plot_workflow.py",
+  "source_code_sha256": "c1b1bc5000d7c1b411fd9106a5697bd8347b4a7ad71750af8eb3bdaa33af3455",
+  "data_snapshot": "fig1_workflow_data.csv",
+  "data_sha256": "9f49567e1b2474a90e49636c737b792371ca1ed2b476d884b76252fe02fbc4c7",
+  "word_svg": "fig1_workflow_word.svg; all text outlined as vector paths",
+  "generated_at_utc": "2026-10-18T16:06:08.231104+00:00"
+}
